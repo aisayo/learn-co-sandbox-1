@@ -3,17 +3,18 @@ class Travel::CLI
   def call 
   puts "Ready to book your next vacation?"
   puts "Please choose from the list of following continents to learn more:"
-  Travel::Scraper.new.scrape_locations
   list_locations
   menu
   goodbye
   end 
   
   def list_locations
-    Travel::Location.all.each_with_index do |location, i|
+    Travel::Scraper.new.scrape_locations
+
+    # Travel::Location.all.each_with_index do |location, i|
      
-    puts "#{i +1}. #{location.name}"
-   end 
+    # puts "#{i +1}. #{location.name}"
+   #end 
   end 
   
   def menu

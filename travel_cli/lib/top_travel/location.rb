@@ -2,14 +2,14 @@ require 'pry'
 
 class Travel::Location 
 
-  attr_accessor :name, :summary
+  attr_accessor :name, :url
 
   @@all = []
 
   def initialize
     @name = name 
     
-    @summary = summary 
+    @url = url
     
   end 
   
